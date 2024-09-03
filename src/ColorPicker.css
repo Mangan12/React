@@ -1,0 +1,187 @@
+/* General styles */
+.color-picker-page {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .upload-container {
+    margin: 20px 0;
+  }
+  
+  #image-upload {
+    display: none;
+  }
+  
+  .upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .upload-label:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Image and overlay styles */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 400px; /* Adjusted width */
+    height: 400px; /* Adjusted height */
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .image-overlay-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure the overlay does not block image interactions */
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Default transparent */
+    pointer-events: none; /* Ensure the overlay does not block image interactions */
+  }
+  
+  /* Controls styles */
+  .controls-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .control-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-icon {
+    margin-right: 8px;
+  }
+  
+  .crop-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .apply-crop-button,
+  .cancel-crop-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .apply-crop-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .cancel-crop-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .apply-crop-button .control-icon,
+  .cancel-crop-button .control-icon {
+    margin-right: 5px;
+  }
+  
+  /* Color picker styles */
+  .color-picker-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: left;
+  }
+  
+  .color-picker-toggle {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .color-picker-toggle:hover {
+    background-color: #0056b3;
+  }
+  
+  .color-picker {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .image-wrapper {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .controls-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .color-picker-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
