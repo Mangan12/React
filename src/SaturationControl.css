@@ -1,0 +1,16 @@
+/* SaturationControl.css */
+.saturation-control {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .slider {
+    width: 80%;
+    margin: 10px 0;
+  }
+  
+  .percentage-display {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

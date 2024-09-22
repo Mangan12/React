@@ -1,0 +1,17 @@
+/* HueControl.css */
+.hue-control {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .hue-slider {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .hue-percentage {
+    font-size: 14px;
+    color: #333;
+  }
+  

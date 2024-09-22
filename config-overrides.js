@@ -9,6 +9,7 @@ module.exports = function override(config, env) {
     "stream": require.resolve("stream-browserify"),
     "buffer": require.resolve("buffer/"),
     "util": require.resolve("util/"),
+    "process": require.resolve("process/browser")
   };
   
   config.plugins = [
@@ -20,4 +21,4 @@ module.exports = function override(config, env) {
   ];
   
   return config;
-}
+};

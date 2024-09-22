@@ -1,0 +1,83 @@
+.palette-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.palette {
+    display: flex;
+    overflow: hidden;
+    /* Ensure colors stay in a row with no gaps */
+    border-radius: 10px;
+    /* Rounded corners for the entire palette */
+    height: 40px;
+    margin-right: 20px;
+    /* Added space between the palette and buttons */
+}
+
+.color-box {
+    width: 80px;
+    height: 40px;
+    /* border-radius: 10px; Rounded corners to match the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.selected {
+    border: 0.5px solid black; /* White border for the selected color box */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9); /* Optional: subtle white glow */
+    border-radius: 6px;
+  }
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.add-color,
+.remove-color {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.add-color:hover,
+.remove-color:hover {
+    background-color: #f0f0f0;
+    /* Light hover effect */
+}
+
+.buttons {
+    margin-right: 10px;
+}
+.color-picker-popover {
+    position: absolute;
+    top: -320px; /* Adjust this value as necessary depending on the size of the picker */
+    z-index: 10; /* Ensure the picker appears on top */
+  }
+
+  .mixed-color-box {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 2px solid black;
+  }
